@@ -1,10 +1,5 @@
 {
-	"name": "titanium/yii2-app-plain",
-	"description": "Yii 2 Basic Application Plain Template",
-	"keywords": ["yii2", "framework", "basic", "plain", "application template"],
-	"type": "project",
-	"license": "BSD-3-Clause",
-    "minimum-stability": "dev",
+	"minimum-stability": "dev",
     "repositories": [
         {
             "type": "vcs",
@@ -43,11 +38,10 @@
 	},
 	"extra": {
 		"writable": [
-			"protected/runtime",
-			"assets"
+			"runtime"
 		],
 		"executable": [
-			"protected/yii"
+			"yii"
 		]
 	}
 }
