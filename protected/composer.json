@@ -4,11 +4,23 @@
 	"keywords": ["yii2", "framework", "basic", "plain", "application template"],
 	"type": "project",
 	"license": "BSD-3-Clause",
-	"require": {
-		"php": ">=5.4.0",
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ertong/yii2-asset-converter"
+        },
+        {
+            "type": "vcs",
+            "url": "git@web.min.org.ua:yii2.tit.utils"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
 		"yiisoft/yii2": "*",
 		"yiisoft/yii2-bootstrap": "*",
-		"yiisoft/yii2-swiftmailer": "*"
+		"yiisoft/yii2-swiftmailer": "*",
+        "nizsheanez/yii2-asset-converter": "*"
 	},
 	"require-dev": {
 		"yiisoft/yii2-codeception": "*",
@@ -16,6 +28,7 @@
 		"yiisoft/yii2-gii": "*"
 	},
 	"suggest": {
+        "titanium-ua/utils": "*",
 		"codeception/codeception": "Codeception, 1.8.*@dev is currently works well with Yii.",
 		"codeception/specify": "BDD style code blocks for PHPUnit and Codeception",
 		"codeception/verify": "BDD Assertions for PHPUnit and Codeception"

@@ -15,10 +15,9 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+    public $sourcePath = __DIR__;
     public $css = [
-        'css/site.css',
+        'css/main.less',
     ];
     public $js = [
     ];
@@ -26,4 +25,15 @@ class AppAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
+
+    function __construct()
+    {
+        $this->publishOptions = [
+            "beforeCopy" => function ($from, $to) {
+                return substr($from, -strlen(".php")) != ".php";
+            },
+        ];
+    }
+
+
 }
