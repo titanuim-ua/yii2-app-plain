@@ -48,6 +48,11 @@ $config = [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
+        'request' => [
+            'enableCookieValidation' => false,
+            'enableCsrfValidation' => false,
+            'cookieValidationKey' => 'xxxxxxx',
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],

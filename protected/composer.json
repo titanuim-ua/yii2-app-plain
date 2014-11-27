@@ -4,10 +4,6 @@
         {
             "type": "vcs",
             "url": "https://github.com/ertong/yii2-asset-converter"
-        },
-        {
-            "type": "vcs",
-            "url": "git@web.min.org.ua:yii2.tit.utils"
         }
     ],
     "require": {
@@ -37,11 +33,18 @@
 		"process-timeout": 1800
 	},
 	"extra": {
-		"writable": [
-			"runtime"
-		],
-		"executable": [
-			"yii"
-		]
+        "writable": [
+            "protected/runtime",
+            "assets"
+        ],
+        "executable": [
+            "protected/yii"
+        ],
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower",
+            "npm-searchable": false,
+            "bower-searchable": false
+        }
 	}
 }
