@@ -1,29 +1,18 @@
 <?php
 
-Yii::setAlias('@tests', dirname(__DIR__) . '/tests');
+$main = require(__DIR__ . '/main.php');
+unset($main["components"]["errorHandler"]);
+unset($main["components"]["user"]);
+unset($main["components"]["request"]);
 
-$params = require(__DIR__ . '/params.php');
-$db = require(__DIR__ . '/db.php');
-
-return [
-    'id' => 'basic-console',
-    'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+$config = \yii\helpers\ArrayHelper::merge($main, [
     'controllerNamespace' => 'app\commands',
-    'extensions' => require(__DIR__ . '/../vendor/yiisoft/extensions.php'),
     'components' => [
-        'cache' => [
-            'class' => 'yii\caching\FileCache',
+        'urlManager'=>
+        [
+            'baseUrl' => 'http://yii2-app-plain.com/',
         ],
-        'log' => [
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
-            ],
-        ],
-        'db' => $db,
-    ],
-    'params' => $params,
-];
+    ]
+]);
+
+return $config;
