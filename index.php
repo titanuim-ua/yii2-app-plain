@@ -1,10 +1,11 @@
 <?php
 
+defined('YII_DEBUG') or define('YII_DEBUG', file_exists(__DIR__."/protected/config/.debug"));
+
 require(__DIR__ . '/protected/vendor/autoload.php');
 require(__DIR__ . '/protected/vendor/yiisoft/yii2/Yii.php');
 //require(__DIR__ . '/protected/vendor/titanium-ua/utils/helpers/globals.php');
 
-defined('YII_DEBUG') or define('YII_DEBUG', file_exists(__DIR__."/protected/config/.debug"));
 if (YII_DEBUG)
 {
     ini_set('display_errors',1);
