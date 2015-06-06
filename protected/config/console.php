@@ -1,18 +1,14 @@
 <?php
 
-$main = require(__DIR__ . '/main.php');
-unset($main["components"]["errorHandler"]);
-unset($main["components"]["user"]);
-unset($main["components"]["request"]);
+Yii::setAlias('@tests', dirname(__DIR__) . '/tests');
 
-$config = \yii\helpers\ArrayHelper::merge($main, [
+return \yii\helpers\ArrayHelper::merge(require('config.php'),[
+    'id' => 'basic-console',
     'controllerNamespace' => 'app\commands',
+    'bootstrap' => ['ubi','forum'],
     'components' => [
-        'urlManager'=>
-        [
-            'baseUrl' => 'http://yii2-app-plain.com/',
+        'urlManager' => [
+            'baseUrl' => "https://auto.today",
         ],
-    ]
+    ],
 ]);
-
-return $config;

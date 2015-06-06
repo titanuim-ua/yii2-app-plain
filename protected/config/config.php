@@ -1,8 +1,8 @@
 <?php
 
-$main = require(__DIR__ . '/main.php');
+$main = require('main.php');
 
-$config = \yii\helpers\ArrayHelper::merge($main, [
+return \yii\helpers\ArrayHelper::merge($main,[
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
@@ -11,7 +11,9 @@ $config = \yii\helpers\ArrayHelper::merge($main, [
             'password' => '',
             'charset' => 'utf8',
         ],
+
+        'assetManager' =>[
+            'forceCopy'=>false,
+        ],
     ]
 ]);
-
-return $config;

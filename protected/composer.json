@@ -1,50 +1,54 @@
 {
-	"minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/ertong/yii2-asset-converter"
-        }
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/ertong/yii2-asset-converter"
+    },
+    {
+      "type": "vcs",
+      "url": "git@halk.min.org.ua:yii2.tit.utils"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "*",
+    "yiisoft/yii2-bootstrap": "*",
+    "yiisoft/yii2-swiftmailer": "*",
+    "nizsheanez/yii2-asset-converter": "*",
+    "titanium-ua/utils": "*"
+  },
+  "require-dev": {
+    "yiisoft/yii2-codeception": "*",
+    "yiisoft/yii2-debug": "*",
+    "yiisoft/yii2-gii": "*"
+  },
+  "suggest": {
+    "codeception/codeception": "Codeception, 1.8.*@dev is currently works well with Yii.",
+    "codeception/specify": "BDD style code blocks for PHPUnit and Codeception",
+    "codeception/verify": "BDD Assertions for PHPUnit and Codeception"
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "yii\\composer\\Installer::setPermission"
+    ]
+  },
+  "config": {
+    "process-timeout": 1800
+  },
+  "extra": {
+    "writable": [
+      "protected/runtime",
+      "assets"
     ],
-    "require": {
-        "php": ">=5.4.0",
-		"yiisoft/yii2": "*",
-		"yiisoft/yii2-bootstrap": "*",
-		"yiisoft/yii2-swiftmailer": "*",
-        "nizsheanez/yii2-asset-converter": "*"
-	},
-	"require-dev": {
-		"yiisoft/yii2-codeception": "*",
-		"yiisoft/yii2-debug": "*",
-		"yiisoft/yii2-gii": "*"
-	},
-	"suggest": {
-        "titanium-ua/utils": "*",
-		"codeception/codeception": "Codeception, 1.8.*@dev is currently works well with Yii.",
-		"codeception/specify": "BDD style code blocks for PHPUnit and Codeception",
-		"codeception/verify": "BDD Assertions for PHPUnit and Codeception"
-	},
-	"scripts": {
-		"post-create-project-cmd": [
-			"yii\\composer\\Installer::setPermission"
-		]
-	},
-	"config": {
-		"process-timeout": 1800
-	},
-	"extra": {
-        "writable": [
-            "protected/runtime",
-            "assets"
-        ],
-        "executable": [
-            "protected/yii"
-        ],
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower",
-            "npm-searchable": false,
-            "bower-searchable": false
-        }
-	}
+    "executable": [
+      "protected/yii"
+    ],
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower",
+      "npm-searchable": false,
+      "bower-searchable": false
+    }
+  }
 }
