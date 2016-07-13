@@ -14,7 +14,7 @@ git pull
 cd protected;
 
 composer install -n
-#npm install
+npm install
 
 rm -rf $DIR/../assets/*
 rm -rf $DIR/runtime/cache
