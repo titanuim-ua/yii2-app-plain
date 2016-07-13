@@ -16,46 +16,11 @@ $config = [
 
     ],
     'components' => [
-        'assetManager' =>[
-            'forceCopy'=>YII_DEBUG,
-            'bundles' => [
-                yii\bootstrap\BootstrapAsset::class => [
-                    'css' => [
-                        YII_ENV_DEV ? 'css/bootstrap.css' : 'css/bootstrap.min.css',
-                    ]
-                ],
-                yii\bootstrap\BootstrapPluginAsset::class => [
-                    'js' => [
-                        YII_ENV_DEV ? 'js/bootstrap.js' : 'js/bootstrap.min.js',
-                    ]
-                ]
-            ],
-            'converter'=>[
-                'class'=>nizsheanez\assetConverter\Converter::class,
-                'force'=>false, // true : If you want convert your sass each time without time dependency
-                //we do not use directory in our fork
-//                'destinationDir' => 'assets/compiled', //at which folder of @webroot put compiled files
-                'parsers' => [
-                    'sass' => [ // file extension to parse
-                        'class' => 'nizsheanez\assetConverter\Sass',
-                        'output' => 'css', // parsed output file type
-                        'options' => [
-                            'cachePath' => '@app/runtime/cache/sass-parser' // optional options
-                        ],
-                    ],
-                    'scss' => [ // file extension to parse
-                        'class' => 'nizsheanez\assetConverter\Sass',
-                        'output' => 'css', // parsed output file type
-                        'options' => [] // optional options
-                    ],
-                    'less' => [ // file extension to parse
-                        'class' => 'nizsheanez\assetConverter\Less',
-                        'output' => 'css', // parsed output file type
-                        'options' => [
-                            'auto' => true, // optional options
-                        ]
-                    ]
-                ]
+        'assetManager' => [
+            'forceCopy' => YII_DEBUG,
+            'converter' => [
+                'class' => app\components\postcss\Converter::class,
+                'force' => false,
             ]
         ],
         'cache' => [

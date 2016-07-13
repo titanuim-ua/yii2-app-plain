@@ -3,10 +3,6 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/ertong/yii2-asset-converter"
-    },
-    {
-      "type": "vcs",
       "url": "git@halk.min.org.ua:yii2.tit.utils"
     }
   ],
@@ -15,7 +11,6 @@
     "yiisoft/yii2": "*",
     "yiisoft/yii2-bootstrap": "*",
     "yiisoft/yii2-swiftmailer": "*",
-    "nizsheanez/yii2-asset-converter": "*",
     "titanium-ua/utils": "*"
   },
   "require-dev": {
