@@ -8,6 +8,7 @@ $config = [
     'bootstrap' => ['log'],
     'language' => 'en',
     'sourceLanguage' => 'en',
+    'timeZone' => 'Europe/Kiev',
     'extensions' => yii\helpers\ArrayHelper::merge(
         require(__DIR__ . '/../vendor/yiisoft/extensions.php'),
         []
