@@ -20,7 +20,7 @@ $config = [
         'assetManager' => [
             'forceCopy' => YII_DEBUG,
             'converter' => [
-                'class' => app\components\postcss\Converter::class,
+                'class' => tit\utils\postcss\Converter::class,
                 'force' => false,
             ]
         ],

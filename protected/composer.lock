@@ -358,7 +358,7 @@
             "source": {
                 "type": "git",
                 "url": "git@halk.min.org.ua:yii2.tit.utils",
-                "reference": "a5855c5b756700edf6fabe9618e4718e11e5b456"
+                "reference": "acb94ec38af31390d0e5c83e584b8f59f8aa760e"
             },
             "type": "library",
             "autoload": {
@@ -366,7 +366,7 @@
                     "tit\\utils\\": ""
                 }
             },
-            "time": "2016-04-14 09:42:01"
+            "time": "2016-07-27 15:39:31"
         },
         {
             "name": "yiisoft/yii2",
