@@ -16,6 +16,9 @@ $config = [
     'modules' =>[
 
     ],
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+    ],
     'components' => [
         'assetManager' => [
             'forceCopy' => YII_DEBUG,

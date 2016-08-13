@@ -4,6 +4,10 @@
     {
       "type": "vcs",
       "url": "git@halk.min.org.ua:yii2.tit.utils"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
     }
   ],
   "require": {
@@ -37,18 +41,12 @@
         {
           "runtime": "0770",
           ".": "0770",
-          "config": "0770",
-          "../assets": "0770",
+          "config": "0700",
+          "../assets": "0775",
           "yii": "0750",
           "init.sh": "0750"
         }
       ]
-    },
-    "asset-installer-paths": {
-      "npm-asset-library": "vendor/npm",
-      "bower-asset-library": "vendor/bower",
-      "npm-searchable": false,
-      "bower-searchable": false
     }
   }
 }
