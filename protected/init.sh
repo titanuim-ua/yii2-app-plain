@@ -13,7 +13,7 @@ git pull
 
 cd protected;
 
-composer install -n
+composer install -n --prefer-dist
 npm install
 
 rm -rf $DIR/../assets/*
@@ -28,3 +28,8 @@ echo -en "\n\n\nCurrent commit: "
 git rev-parse HEAD
 
 git log -n 1
+
+if [ -e "./init-post.sh" ]
+then
+  ./post-init.sh
+fi

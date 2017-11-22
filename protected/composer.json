@@ -3,7 +3,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@halk.min.org.ua:yii2.tit.utils"
+      "url": "git@git.min.org.ua:yii2/tit.utils.git"
     },
     {
       "type": "composer",
@@ -18,7 +18,6 @@
     "titanium-ua/utils": "*"
   },
   "require-dev": {
-    "yiisoft/yii2-codeception": "*",
     "yiisoft/yii2-debug": "*",
     "yiisoft/yii2-gii": "*"
   },
@@ -33,7 +32,8 @@
     ]
   },
   "config": {
-    "process-timeout": 1800
+    "process-timeout": 1800,
+    "discard-changes": true
   },
   "extra": {
     "yii\\composer\\Installer::postCreateProject": {
