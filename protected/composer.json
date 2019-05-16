@@ -15,6 +15,7 @@
     "yiisoft/yii2": "*",
     "yiisoft/yii2-bootstrap": "*",
     "yiisoft/yii2-swiftmailer": "*",
+    "yiisoft/yii2-redis": "*",
     "titanium-ua/utils": "*"
   },
   "require-dev": {

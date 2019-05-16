@@ -17,6 +17,12 @@ return \yii\helpers\ArrayHelper::merge(require('config.php'),[
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
+        'session' => [
+//            'class' => \yii\redis\Session::class,
+//            'redis' => 'redis',
+            'cookieParams' => ['lifetime' => 0, "httponly"=>1, "secure"=>1],
+            'timeout'=>60*60,
+        ],
     ],
 
 ]);

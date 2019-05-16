@@ -29,8 +29,8 @@ $config = [
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
+            'keyPrefix' => 'PLAIN.'.(file_exists(__DIR__."/cache.key") ? trim(file_get_contents(__DIR__."/cache.key")): ''),
 //            'class' => 'yii\caching\MemCache',
-//            'keyPrefix' => 'PLAIN.',
 //            'servers' => [
 //                [
 //                    'host' => '127.0.0.1',
@@ -38,7 +38,17 @@ $config = [
 //                    'weight' => 1024,
 //                ],
 //            ],
+//            'class' => yii\redis\Cache::class,
+//            'redis' => 'redis'
         ],
+
+//        'redis'=>[
+//            'class'=>yii\redis\Connection::class,
+//            'hostname' => '127.0.0.1',
+//            'port' => 6379,
+//            'database' => 1,
+//        ],
+
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'useFileTransport' => false,
