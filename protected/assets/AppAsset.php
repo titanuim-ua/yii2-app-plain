@@ -17,7 +17,7 @@ class AppAsset extends AssetBundle
 {
     public $sourcePath = __DIR__;
     public $css = [
-        'css/main.less',
+        'build/css/main.css',
     ];
     public $js = [
     ];
